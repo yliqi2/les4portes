@@ -1,0 +1,26 @@
+<header class="site-header">
+	<div class="container">
+		<div class="brand">
+			<a class="logo" href="/">
+				<span class="logo-main">Les </span><span class="logo-accent">4</span><span class="logo-main">Portes</span>
+			</a>
+			<div class="tagline">Carta • Bar • Cocina</div>
+		</div>
+
+		<button class="menu-toggle" (click)="toggleNav()" [attr.aria-expanded]="navOpen" aria-label="Abrir menú">
+			<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M3 6h18M3 12h18M3 18h18"></path>
+			</svg>
+		</button>
+
+		<nav class="nav" [class.open]="navOpen" aria-label="Navegación principal">
+			<ul>
+				<li><a href="#E">Entrantes</a></li>
+				<li><a href="#B">Bocatas</a></li>
+				<li><a href="#PC">Platos Combinados</a></li>
+				<li><a href="#HF">Hamburguesas y Frankfurts</a></li>
+				<li><a href="#C">Contacto</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
