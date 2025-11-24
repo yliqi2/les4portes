@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global theme for a warm, friendly bar UI */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+	/* Minimal, warm bar palette */
+	--bg: #fafafa; /* very light neutral */
+	--surface: #ffffff; /* card surface */
+	--text: #111217; /* strong charcoal for readability */
+	--muted: #6b6f76; /* subdued secondary text */
+	--accent: #A55B3A; /* warm terracotta */
+	--accent-2: #D9B87A; /* soft golden sand */
+	--accent-rgb: 165,91,58;
+	--accent2-rgb: 217,184,122;
+	--glass: rgba(255,255,255,0.6);
+	--card-shadow: 0 8px 28px rgba(20,16,12,0.06);
+	--radius: 10px;
+}
+
+html { scroll-behavior: smooth; }
+body {
+	font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	color: var(--text);
+	background: linear-gradient(180deg, var(--bg) 0%, #f7f7f7 100%);
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	margin: 0;
+}
+
+/* A centered page container used across components */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+
+/* Global headings */
+h1,h2,h3 { font-family: 'Montserrat', 'Roboto', sans-serif; color: var(--text); }
+h2 { font-size: 1.6rem; }
+
+/* Cards baseline */
+.card {
+	background: var(--surface);
+	border-radius: var(--radius);
+	box-shadow: var(--card-shadow);
+	padding: 0.8rem;
+}
+
+/* Small utilities */
+.muted { color: var(--muted); }
+

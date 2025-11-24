@@ -13,14 +13,27 @@
 			</svg>
 		</button>
 
-		<nav class="nav" [class.open]="navOpen" aria-label="Navegación principal">
-			<ul>
-				<li><a href="#E">Entrantes</a></li>
-				<li><a href="#B">Bocatas</a></li>
-				<li><a href="#PC">Platos Combinados</a></li>
-				<li><a href="#HF">Hamburguesas y Frankfurts</a></li>
-				<li><a href="#C">Contacto</a></li>
-			</ul>
-		</nav>
+		@if (navOpen) {
+			<nav class="nav" [class.open]="navOpen" aria-label="Navegación principal">
+				<ul>
+					<li><a href="#E" (click)="navOpen && toggleNav()">Entrantes</a></li>
+					<li><a href="#B" (click)="navOpen && toggleNav()">Bocatas</a></li>
+					<li><a href="#PC" (click)="navOpen && toggleNav()">Platos Combinados</a></li>
+					<li><a href="#HF" (click)="navOpen && toggleNav()">Hamburguesas y Frankfurts</a></li>
+					<li><a href="#C" (click)="navOpen && toggleNav()">Contacto</a></li>
+				</ul>
+			</nav>
+		} @else {
+			<nav class="nav" aria-label="Navegación principal">
+				<ul>
+					<li><a href="#E">Entrantes</a></li>
+					<li><a href="#B">Bocatas</a></li>
+					<li><a href="#PC">Platos Combinados</a></li>
+					<li><a href="#HF">Hamburguesas y Frankfurts</a></li>
+					<li><a href="#C">Contacto</a></li>
+				</ul>
+			</nav>
+		}
+
 	</div>
 </header>

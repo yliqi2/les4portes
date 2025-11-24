@@ -1,0 +1,5 @@
+.site-wrapper { padding: 1.2rem 0 2.5rem 0; }
+.main { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+
+.brand-space { display:flex; align-items:center; gap:1rem; }
+

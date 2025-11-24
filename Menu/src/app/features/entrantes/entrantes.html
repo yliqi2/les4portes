@@ -1,0 +1,23 @@
+<section id="E" class="entrantes">
+    <div class="container">
+        <h2>Entrantes</h2>
+        <ul class="product-list">
+        @for (item of items; let i = $index; track $index) {
+            <li class="product">
+                @if (item.image) {
+                <div class="media">
+                    <img src="/images/{{ item.image }}" alt="{{ item.name }}" />
+                </div>
+            }
+                <div class="info">
+                    <h3>{{ item.name }}</h3>
+                    @if (item.description) {
+                        <p class="desc">{{ item.description }}</p>
+                    }
+                    <div class="price">{{ item.price | number:'1.2-2' }} €</div>
+                </div>
+            </li>
+        }
+        </ul>
+    </div>
+</section>

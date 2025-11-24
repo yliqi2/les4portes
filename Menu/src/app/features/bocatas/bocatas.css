@@ -1,0 +1,23 @@
+/* Bocatas share the same visual language as Entrantes */
+.bocatas { padding: 1.25rem 0; }
+
+.bocatas .product-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+
+.bocatas .product { display:flex; gap:0.9rem; align-items:center; padding:0.9rem; border-radius:12px; background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,250,248,0.96)); box-shadow: 0 8px 24px rgba(30,20,10,0.06); transition: transform .12s ease, box-shadow .12s ease; }
+.bocatas .product:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(30,20,10,0.08); }
+.bocatas img { width:100px; height:100px; object-fit:cover; border-radius:8px; flex-shrink:0; }
+.bocatas .info h3 { margin:0; font-size:1.12rem; }
+.bocatas .info .desc { color:var(--muted); font-size:0.96rem; }
+.bocatas .price { font-weight:700; color:var(--accent); padding:0.18rem 0.5rem; border-radius:999px; display:inline-block; margin-top:0.25rem; }
+
+/* Responsive: stack bocatas cards on small screens */
+@media (max-width: 720px) {
+	.bocatas .product-list { grid-template-columns: 1fr; gap: 0.85rem; }
+	.bocatas .product { flex-direction: column; align-items: center; text-align: center; padding: 0.9rem 0.85rem; }
+	.bocatas img { width: 120px; height: 120px; margin-bottom: 0.6rem; }
+	.bocatas .info .desc { font-size: 0.95rem; }
+}
+
+@media (max-width: 420px) {
+	.bocatas img { width: 96px; height: 96px; }
+}
